@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace ConsoleTests
 {
@@ -6,7 +7,14 @@ namespace ConsoleTests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var notepade = Process.Start("notepad");
+
+
+            Console.WriteLine("Завершено");
+            Console.ReadLine();
+
+            notepade.CloseMainWindow();
+            
         }
     }
 }
